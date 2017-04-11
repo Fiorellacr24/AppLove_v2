@@ -4,15 +4,15 @@
 	var imagenes = [{
 			src:"assets/img/img-1.jpg",
 			alt: "img1",
-			caption: "Nombre del Proyecto 1"
+			caption: "Tayman Group"
 		}, {
 			src:"assets/img/img-2.jpg",
 			alt: "img2",
-			caption: "Nombre del Proyecto 2"
+			caption: "Nalia Organics"
 		}, {
 			src:"assets/img/img-3.jpg",
 			alt: "img3",
-			caption: "Nombre del Proyecto 3"
+			caption: "Brass Coq"
 		}, {
 			src:"assets/img/img-4.jpg",
 			alt: "img4",
@@ -63,7 +63,7 @@
 		return event.caption;
 	});
 
-	function printimg(ruta,alt, caption){
+	function printimg(ruta, alt, caption){
 		var galeria = document.getElementById('galeria');
 		var figure = document.createElement('figure');
 		var figcaption = document.createElement('figcaption');
@@ -80,17 +80,23 @@
 		figure.appendChild(figcaption);
 		galeria.appendChild(figure);
 
-		img.addEventListener('click', function (event){
-		var modal = document.getElementById('modal');
-		modal.style.display = 'block';
-		});
-	} 
+	}
+
+	document.getElementById('galeria').addEventListener('click', function(event){
+		if(event.target.tagName == 'IMG'){
+			modal.style.display = "block";
+	document.getElementsByClassName('mod-a')[0].src = event.target.src;
+		}
+	});
+
 
 	for(var i=0; i < imagenes.length; i++){
 		printimg(ruta[i], alt[i], caption[i]);
 	}
 
-
+	document.getElementById('close').addEventListener('click', function(){
+		modal.style.display = "none";
+	});
 
 	/*for(var i = 1; i < 13; i++){
 		var div = document.createElement('div');

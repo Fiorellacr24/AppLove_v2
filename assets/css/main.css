@@ -203,4 +203,5 @@ footer{
 .mod-img .cerrar{
   border: none;
   width: 20px;
+  position: absolute;
 }
