@@ -166,9 +166,9 @@ footer{
   margin-bottom: 45px;
 }
 
+/* Galeria */
 #galeria{
-  width: 820px;
-  background: pink;
+  width: 900px;
   margin: auto;
 }
 
@@ -180,30 +180,27 @@ footer{
   display: inline-block;
 }
 
-/* Modal 
+/* Modal */ 
 .modal{
+  display: none;
   position: fixed;
+  z-index:1;
   background: #04B486;
+  padding-top: 100px;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.mod-img{
-  width: 100%;
-  height: 50%;
-}
-
-.mod-img a{
-  color: #fff;
-  font-size: 40px;
-  text-decoration: none;
-  margin: 0 10px;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
 }
 
 .mod-img img{
   width: 500px;
-  height: 100px;
+  max-width: 100%;
+  border: 7px solid #fff;
 }
-*/
+
+.mod-img .cerrar{
+  border: none;
+  width: 20px;
+}
